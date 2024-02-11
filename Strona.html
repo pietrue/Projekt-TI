@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <title>AlterNation</title>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="Index.html"><img src="images/Logo/White logo - no background.png" class="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <img src="images/Exit.png" class="mobile" onclick="hideMenu()" width="30px" height="30px">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Team Picks</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Essentials</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <b class="mobile" onclick="showMenu()">☰</b>
+        </nav>
+        <div class="Hbox">
+            <h1>The Alternative Hub</h1>
+            <p>Covering the best alternative music, art and fashion and compiling it all into a neat website just for you.</p>
+            <a href="" class="click-button" onclick="alert('You just learnt more :D')">To learn more click here </a>
+        </div>
+    </section>
+    
+    <section class="Genre">
+        <h1>Genres worth checking out</h1>
+        <p>Here you can find the up and coming alternative genres that </p>
+    
+        <div class="row">
+            <div class="Genre-col">
+            <h3>Neo-Shoegaze</h3>
+            <p>This genre redefines what modern band music is. 
+                Finding its footing in the early 00's the internet played a huge role in its comeup.                    Music-heads around the world started sharing their music taste on websites like 4Chan and Reddit
+                serving as the breeding ground for the shoegaze revival era.
+                Many bands started forming soon after, mixing and matching styles and themes forming what we know now as Neo-Shoegaze.
+            </p>
+            </div>
+            <div class="Genre-col">
+            <h3>progressive Alt Rock</h3>
+            <p>As a movement it presents new horizons for the alt rock genre, with complex chord progressions and atypical
+                scale patterns for vocals and instrumental melodies. Coming on the heels of 90s alt rock era the leading bands 
+                got bored of the samey style presented the decade before coming up with experimental yet pleasant
+                to the ear ideas and solutions, creating the "format" of the subgenre.
+            </p>
+            </div>
+            <div class="Genre-col">
+                 <h3>Zoomergaze</h3>
+                 <p>Coming from internet culture and the diversity of artists streaming services presented, Zoomergaze 
+                    projects focus on mixing overblown well produced shoegaze melodies and chords with grungy and 
+                    modern techniques which Digital audio workspaces offer for producers. This subgenre of shoegaze
+                    is still finding its footing in the modern music scene and no doubt will become one of the most
+                    popular and populated genres of our era.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="Bands">
+        <h1>Admins top artists right now</h1>
+        <div class="row">
+            <div class="Bands-col" title="Placebo">
+                <img src="images/FlexImages/Placebo.jpg" >
+                <div class="Nazwa">
+                    <h4>Placebo</h4>
+                </div>
+            </div>
+            <div class="Bands-col" title="The Smashing Pumpkins">
+                <img src="images/FlexImages/Smashing Pumpkins.jpg" >
+                <div class="Nazwa">
+                    <h4>The Smashing Pumpkins</h4>
+                </div>
+            </div>
+            <div class="Bands-col" title="Yeule">
+                <img src="images/FlexImages/Yeule.png" >
+                <div class="Nazwa">
+                    <h4>Yeule</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="event-calendar">
+        <h2>Event calendar</h2>
+        <table>
+            <thead>
+              <tr>
+                <th colspan="2">Artist</th>
+                <th>Date</th>
+                <th>Tour name</th>
+                <th>venue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">Placebo</td>
+                <td>12.06.2024</td>
+                <td>Nancy People 2024</td>
+                <td>Spodek Katowice</td>
+              </tr>
+              <tr>
+                <td colspan="2">The Smashing Pumpkins</td>
+                <td>13.09.2024</td>
+                <td>The world is a vampire Tour</td>
+                <td>PreZero Arena</td>
+              </tr>
+              <tr>
+                <td colspan="2">Yeule</td>
+                <td>08.08.2024</td>
+                <td>Softscars Tour 2024</td>
+                <td>PreZero Arena</td>
+              </tr>
+              <tr>
+                <td colspan="2">Primus</td>
+                <td>09.05.2024</td>
+                <td>Primus Sucks!</td>
+                <td>Klub Stodoła</td>
+              </tr>
+              <tr>
+                <td colspan="2">Muse</td>
+                <td>TBA</td>
+                <td>Absolution 20th Anniversary Tour</td>
+                <td>PGE Narodowy</td>
+              </tr>
+              <tr>
+                <td colspan="2">A perfect circle</td>
+                <td>03.12.2024</td>
+                <td>TBA</td>
+                <td>Spodek Katowice</td>
+              </tr>
+              <tr>
+                <td colspan="2">Pixies</td>
+                <td>23.03.2024</td>
+                <td>TBA</td>
+                <td>PGE Narodowy</td>
+              </tr>
+            </tbody>
+            </table>
+        </section>
+        <section class="Questionaire-form">
+            <h2>Ask us a question!</h2>
+            <br>
+            <div class="Form-box">
+                <form>
+                    <div class="Form-item">
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" id="email" name="email" placeholder="your email here" required>
+                    </div>
+                    <div class="Form-item">
+                        <label for="topic">Topic</label>
+                        <br>
+                        <input type="text" id="topic" name="topic" placeholder="state your topic here" required>
+                    </div>
+                    <div class="Form-item">
+                        <label for="music-genre">Favorite music Genre</label>
+                        <br>
+                        <select name="music-genre" id="music-genre"  required>
+                            <option disabled selected value>  select an option  </option>
+                            <option value="Alt Rock">Alt Rock</option>
+                            <option value="shoegaze">Shoegaze</option>
+                            <option value="prog rock">Progressive Alt Rock</option>
+                            <option value="Neo-Shoegaze">Neo-Shoegaze</option>
+                            <option value="Zoomergaze">Zoomergaze</option>
+                            <option value="other">other</option>
+                        </select>
+                    </div>
+                    <div class="Form-item">
+                        <label for="question">question</label>
+                        <br>
+                        <input type="text" id="question" name="question" placeholder="state your question here" required>
+                    </div>
+                    <div class="Form-item">
+                        <br>
+                        <button type="submit">submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    <section class="Footer">
+        <div class="Footer-content">
+            <div class="Social-links">
+                <a href="" target="_blank"><img src="images/instagram-white-icon.webp" alt="Instagram"></a>
+                <a href="" target="_blank"><img src="images/X_logo_2023_(white).png.webp" alt="Twitter"></a>
+                <a href="" target="_blank"><img src="images/youtube-app-white-icon.webp" alt="YouTube"></a>
+            </div>
+            <a href=""><img src="images/Logo/Color logo - no background.png" alt="Logo" class="Footer-logo"></a>
+            <div class="Contact-info">
+                <p>Email: pb125102@stud.ur.edu.pl</p>
+                <p>Phone: +123 456 789</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-135px";
+        }
+    </script>
+
+</body>
+</html>

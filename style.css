@@ -1,0 +1,1169 @@
+/*
+Style dla Całego dokumentu
+
+Opis: style zawierają tylko rodzaj czcionki oraz margin i padding: 0
+
+Markup:
+<p> Czcionka wykorzystana w dokumencie</p>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'JetBrains Mono', monospace;
+}
+</style>
+
+
+Styleguide: 1.0
+*/
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/*
+style dla html:
+
+Opis: jedyne style wykorzystane dla html są związane z responsywnością na urządzeniach mobilnych.
+
+Markup:
+<style>
+@media(max-width: 700px){
+    html{
+        overflow-x: hidden;
+    }
+}    
+</style>
+
+Styleguide 1.1
+*/
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(128,36,181,0.7), rgba(217,222,78,0.7)), url(images/BgImage.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.Logo{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: #000000;
+    transition: 0.25s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+.Hbox{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.Hbox h1{
+    font-size: 40px;
+}
+.Hbox p{
+    font-size: 16px;
+    margin: 10px;
+    margin-left: 0;
+}
+.click-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px;
+}
+.click-button:hover{
+    border: 1px solid rgb(128,36,181);
+    background: rgb(128,36,181);
+    transition: 0.25s;
+}
+
+nav .mobile{
+    display: none;
+}
+/*
+Style dla Nagłówka
+
+Opis: nagłówek zawiera 3 sekcje: opis i przycisk, nawigację i tło.
+
+Markup:
+
+<style>
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(128,36,181,0.7), rgba(217,222,78,0.7)), url(images/BgImage.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.Logo{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: #000000;
+    transition: 0.25s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+.Hbox{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.Hbox h1{
+    font-size: 40px;
+}
+.Hbox p{
+    font-size: 16px;
+    margin: 10px;
+    margin-left: 0;
+}
+.click-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px;
+}
+.click-button:hover{
+    border: 1px solid rgb(128,36,181);
+    background: rgb(128,36,181);
+    transition: 0.25s;
+}
+</style>
+
+
+<section class="header">
+        <nav>
+            <a href="Index.html"><img src="images/Logo/White logo - no background.png" class="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <img src="images/Exit.png" class="mobile" onclick="hideMenu()" width="30px" height="30px">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Team Picks</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Essentials</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <b class="mobile" onclick="showMenu()">☰</b>
+        </nav>
+        <div class="Hbox">
+            <h1>The Alternative Hub</h1>
+            <p>Covering the best alternative music, art and fashion and compiling it all into a neat website just for you.</p>
+            <a href="" class="click-button" onclick="alert('You just learnt more :D')">To learn more click here </a>
+        </div>
+    </section>
+
+Styleguide 2.0
+*/
+
+/*
+Styl dla tła
+
+definiuje style dla tła strony.
+
+Markup:
+<style>
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(128,36,181,0.7), rgba(217,222,78,0.7)), url(images/BgImage.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+</style>
+<section class="header">
+</section>
+
+Styleguide 2.1
+
+*/
+
+/*
+Style dla paska nawigacji
+
+definiują kolory, wielkości i animacje dla nawigacji.
+
+Markup: 
+<style>
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.Logo{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: #000000;
+    transition: 0.25s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+</style>
+<nav>
+    <a href="Index.html"><img src="images/Logo/White logo - no background.png" class="Logo"></a>
+    <div class="nav-links" id="navLinks">
+        <img src="images/Exit.png" class="mobile" onclick="hideMenu()" width="30px" height="30px">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Team Picks</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Essentials</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+Styleguide 2.2
+*/
+
+/*
+Style dla opisu i przycisku
+
+definiuje style i animacje  wykorzystane dla opisu i przycisków.
+
+<style>
+.Hbox{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.Hbox h1{
+    font-size: 40px;
+}
+.Hbox p{
+    font-size: 16px;
+    margin: 10px;
+    margin-left: 0;
+}
+.click-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px;
+}
+.click-button:hover{
+    border: 1px solid rgb(128,36,181);
+    background: rgb(128,36,181);
+    transition: 0.25s;
+}
+</style>
+
+<div class="Hbox">
+    <h1>The Alternative Hub</h1>
+    <p>Covering the best alternative music, art and fashion and compiling it all into a neat website just for you.</p>
+    <a href="" class="click-button" onclick="alert('You just learnt more :D')">To learn more click here </a>
+</div>
+
+Styleguide 2.3
+
+*/
+
+
+/*
+Style wyświetlane dla gatunków w flex
+
+definiuje style którymi otrzymany został rodzaj wyświetlania gatunków.
+
+Markup: 
+
+<style>
+.Genre{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding-top: 100px;
+
+}
+.Genre h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+.Genre p{
+    color: #777;
+    font-size: 12px;
+    font-weight: 300px;
+    line-height: 22px;
+    padding: 10px;
+    padding-left: 0;
+}
+.row{
+    display: flex;
+    margin: 5px;
+    justify-content: space-around;
+}
+.Genre-col{
+    flex-basis: 31%;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    transition: 0.25s;
+    background-image: linear-gradient(rgba(128,36,181,0.7), rgba(217,222,78,0.7));
+}
+.Genre-col:hover{
+    transform: scale(1.05);
+}
+.Genre-col h3{
+    color: #fff;
+    padding-left: 5px;
+}
+.Genre-col p{
+    color: #000000;
+    padding-left: 5px;
+    font-weight: 400;
+}
+</style>
+
+<section class="Genre">
+        <h1>Genres worth checking out</h1>
+        <p>Here you can find the up and coming alternative genres that </p>
+    
+        <div class="row">
+            <div class="Genre-col">
+            <h3>Neo-Shoegaze</h3>
+            <p>This genre redefines what modern band music is. 
+                Finding its footing in the early 00's the internet played a huge role in its comeup.                    Music-heads around the world started sharing their music taste on websites like 4Chan and Reddit
+                serving as the breeding ground for the shoegaze revival era.
+                Many bands started forming soon after, mixing and matching styles and themes forming what we know now as Neo-Shoegaze.
+            </p>
+            </div>
+            <div class="Genre-col">
+            <h3>progressive Alt Rock</h3>
+            <p>As a movement it presents new horizons for the alt rock genre, with complex chord progressions and atypical
+                scale patterns for vocals and instrumental melodies. Coming on the heels of 90s alt rock era the leading bands 
+                got bored of the samey style presented the decade before coming up with experimental yet pleasant
+                to the ear ideas and solutions, creating the "format" of the subgenre.
+            </p>
+            </div>
+            <div class="Genre-col">
+                 <h3>Zoomergaze</h3>
+                 <p>Coming from internet culture and the diversity of artists streaming services presented, Zoomergaze 
+                    projects focus on mixing overblown well produced shoegaze melodies and chords with grungy and 
+                    modern techniques which Digital audio workspaces offer for producers. This subgenre of shoegaze
+                    is still finding its footing in the modern music scene and no doubt will become one of the most
+                    popular and populated genres of our era.
+                </p>
+            </div>
+        </div>
+    </section>
+
+Styleguide 3.0
+*/
+
+.Genre{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding-top: 100px;
+
+}
+.Genre h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+.Genre p{
+    color: #777;
+    font-size: 12px;
+    font-weight: 300px;
+    line-height: 22px;
+    padding: 10px;
+    padding-left: 0;
+}
+.row{
+    display: flex;
+    margin: 5px;
+    justify-content: space-around;
+}
+.Genre-col{
+    flex-basis: 31%;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    transition: 0.25s;
+    background-image: linear-gradient(rgba(128,36,181,0.7), rgba(217,222,78,0.7));
+}
+.Genre-col:hover{
+    transform: scale(1.05);
+}
+.Genre-col h3{
+    color: #fff;
+    padding-left: 5px;
+}
+.Genre-col p{
+    color: #000000;
+    padding-left: 5px;
+    font-weight: 400;
+}
+/*
+Style wyświetlane dla artystów w flex
+
+definiuje jakimi sposobami osiągnięto wygląd galerii artystów.
+
+Markup:
+
+<style>
+.Bands{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.Bands h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+.Bands-col{
+    flex-basis: 31%;
+    position: relative;
+    overflow: hidden;
+    transition: 0.25s;
+    filter: grayscale(1);
+}
+.Bands-col:hover {
+    content: attr(title);
+    transform: scale(1.05);
+}
+.Bands-col img{
+    width: 100%;
+    height: 100%;
+}
+.Nazwa{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.25s;
+}
+.Nazwa:hover{
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+.Nazwa h4{
+    font-weight: 600;
+    color: #fff;
+    left: 20px;
+    bottom: 10px;
+    position: absolute;
+    opacity: 0;
+    transition: 0.25s;
+}
+.Nazwa:hover h4{
+    opacity: 1;
+    transform: scale(1.02);
+}
+.coulms{
+    display: flex;
+    margin: 5px;
+    justify-content: space-around;
+}
+</style>
+
+<section class="Bands">
+        <h1>Admins top artists right now</h1>
+        <div class="row">
+            <div class="Bands-col" title="Placebo">
+                <img src="images/FlexImages/Placebo.jpg" >
+                <div class="Nazwa">
+                    <h4>Placebo</h4>
+                </div>
+            </div>
+            <div class="Bands-col" title="The Smashing Pumpkins">
+                <img src="images/FlexImages/Smashing Pumpkins.jpg" >
+                <div class="Nazwa">
+                    <h4>The Smashing Pumpkins</h4>
+                </div>
+            </div>
+            <div class="Bands-col" title="Yeule">
+                <img src="images/FlexImages/Yeule.png" >
+                <div class="Nazwa">
+                    <h4>Yeule</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+Styleguide 4.0
+*/
+.Bands{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.Bands h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+.Bands-col{
+    flex-basis: 31%;
+    position: relative;
+    overflow: hidden;
+    transition: 0.25s;
+    filter: grayscale(1);
+}
+.Bands-col:hover {
+    content: attr(title);
+    transform: scale(1.05);
+}
+.Bands-col img{
+    width: 100%;
+    height: 100%;
+}
+.Nazwa{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.25s;
+}
+.Nazwa:hover{
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+.Nazwa h4{
+    font-weight: 600;
+    color: #fff;
+    left: 20px;
+    bottom: 10px;
+    position: absolute;
+    opacity: 0;
+    transition: 0.25s;
+}
+.Nazwa:hover h4{
+    opacity: 1;
+    transform: scale(1.02);
+}
+.coulms{
+    display: flex;
+    margin: 5px;
+    justify-content: space-around;
+}
+/*
+Style dla formularza 
+
+definiuje w jaki sposób osiągnięto wygląd formularza.
+
+Markup:
+
+<style>
+.Questionaire-form {
+    background-image: linear-gradient(rgba(128, 36, 181, 0.7), rgba(217, 222, 78, 0.7));
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.Form-box {
+    width: 70%; 
+    border: 1px solid black;
+    background-image: url(images/FormPhoto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-weight: 400;
+}
+
+.Form-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+
+}
+
+button {
+    width: 95%;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border: 1px solid #fff;
+    transition: 0.25s;
+}
+button:hover{
+    background: white;
+    color: #000000;
+}
+#question {
+    width: 95%;
+    height: 120px;
+}
+
+#music-genre, #topic, #email{
+    width: 95%;
+    height: 30px;
+}
+</style>
+
+<section class="Questionaire-form">
+            <h2>Ask us a question!</h2>
+            <br>
+            <div class="Form-box">
+                <form>
+                    <div class="Form-item">
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" id="email" name="email" placeholder="your email here" required>
+                    </div>
+                    <div class="Form-item">
+                        <label for="topic">Topic</label>
+                        <br>
+                        <input type="text" id="topic" name="topic" placeholder="state your topic here" required>
+                    </div>
+                    <div class="Form-item">
+                        <label for="music-genre">Favorite music Genre</label>
+                        <br>
+                        <select name="music-genre" id="music-genre"  required>
+                            <option disabled selected value>  select an option  </option>
+                            <option value="Alt Rock">Alt Rock</option>
+                            <option value="shoegaze">Shoegaze</option>
+                            <option value="prog rock">Progressive Alt Rock</option>
+                            <option value="Neo-Shoegaze">Neo-Shoegaze</option>
+                            <option value="Zoomergaze">Zoomergaze</option>
+                            <option value="other">other</option>
+                        </select>
+                    </div>
+                    <div class="Form-item">
+                        <label for="question">question</label>
+                        <br>
+                        <input type="text" id="question" name="question" placeholder="state your question here" required>
+                    </div>
+                    <div class="Form-item">
+                        <br>
+                        <button type="submit">submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+Styleguide 5.0
+
+*/
+.Questionaire-form {
+    background-image: linear-gradient(rgba(128, 36, 181, 0.7), rgba(217, 222, 78, 0.7));
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.Form-box {
+    width: 70%; 
+    border: 1px solid black;
+    background-image: url(images/FormPhoto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-weight: 400;
+}
+
+.Form-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+
+}
+
+button {
+    width: 95%;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border: 1px solid #fff;
+    transition: 0.25s;
+}
+button:hover{
+    background: white;
+    color: #000000;
+}
+#question {
+    width: 95%;
+    height: 120px;
+}
+
+#music-genre, #topic, #email{
+    width: 95%;
+    height: 30px;
+}
+
+
+/*
+style dla stopki
+
+definiuje jakie metody zostały wykorzystane do osiągnięcia wyglądu stopki.
+
+Markup:
+
+<style>
+.Footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.Footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    align-items: center; 
+}
+
+.Social-links {
+    display: flex; 
+    margin-right: 10px;
+}
+
+.Social-links a {
+    display: inline-block; 
+    margin-right: 10px;
+    text-align: left;
+}
+
+.Social-links img{
+    width: 30px;
+}
+
+.Footer-logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.Contact-info {
+    text-align: right;
+    padding-right: 10px;
+}
+</style>
+
+ <section class="Footer">
+        <div class="Footer-content">
+            <div class="Social-links">
+                <a href="" target="_blank"><img src="images/instagram-white-icon.webp" alt="Instagram"></a>
+                <a href="" target="_blank"><img src="images/X_logo_2023_(white).png.webp" alt="Twitter"></a>
+                <a href="" target="_blank"><img src="images/youtube-app-white-icon.webp" alt="YouTube"></a>
+            </div>
+            <a href=""><img src="images/Logo/Color logo - no background.png" alt="Logo" class="Footer-logo"></a>
+            <div class="Contact-info">
+                <p>Email: pb125102@stud.ur.edu.pl</p>
+                <p>Phone: +123 456 789</p>
+            </div>
+        </div>
+    </section>
+Styleguide 6.0
+*/
+.Footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.Footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    align-items: center; 
+}
+
+.Social-links {
+    display: flex; 
+    margin-right: 10px;
+}
+
+.Social-links a {
+    display: inline-block; 
+    margin-right: 10px;
+    text-align: left;
+}
+
+.Social-links img{
+    width: 30px;
+}
+
+.Footer-logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.Contact-info {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.event-calendar {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+/*
+style dla kalendarza
+
+definuje w jaki sposób osiągnięto wygląd tabeli.
+
+Markup:
+
+<style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+td[colspan="2"] {
+    font-weight: bold;
+}
+</style>
+
+<section class="event-calendar">
+        <h2>Event calendar</h2>
+        <table>
+            <thead>
+              <tr>
+                <th colspan="2">Artist</th>
+                <th>Date</th>
+                <th>Tour name</th>
+                <th>venue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">Placebo</td>
+                <td>12.06.2024</td>
+                <td>Nancy People 2024</td>
+                <td>Spodek Katowice</td>
+              </tr>
+              <tr>
+                <td colspan="2">The Smashing Pumpkins</td>
+                <td>13.09.2024</td>
+                <td>The world is a vampire Tour</td>
+                <td>PreZero Arena</td>
+              </tr>
+              <tr>
+                <td colspan="2">Yeule</td>
+                <td>08.08.2024</td>
+                <td>Softscars Tour 2024</td>
+                <td>PreZero Arena</td>
+              </tr>
+              <tr>
+                <td colspan="2">Primus</td>
+                <td>09.05.2024</td>
+                <td>Primus Sucks!</td>
+                <td>Klub Stodoła</td>
+              </tr>
+              <tr>
+                <td colspan="2">Muse</td>
+                <td>TBA</td>
+                <td>Absolution 20th Anniversary Tour</td>
+                <td>PGE Narodowy</td>
+              </tr>
+              <tr>
+                <td colspan="2">A perfect circle</td>
+                <td>03.12.2024</td>
+                <td>TBA</td>
+                <td>Spodek Katowice</td>
+              </tr>
+              <tr>
+                <td colspan="2">Pixies</td>
+                <td>23.03.2024</td>
+                <td>TBA</td>
+                <td>PGE Narodowy</td>
+              </tr>
+            </tbody>
+            </table>
+        </section>
+
+
+Styleguide 7.0
+*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+td[colspan="2"] {
+    font-weight: bold;
+}
+/*optymalizacja pod urządzenia mobilne*/
+@media(max-width: 700px){
+    html{
+        overflow-x: hidden;
+    }
+    .Hbox h1{
+        font-size: 30px;
+    }
+    .Hbox p{
+        font-size: 14px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #000000;
+        height: 100vh;
+        width: 130px;
+        top: 0;
+        right: -135px;
+        text-align: right;
+        z-index: 2;
+        transition: 0.5s;
+        padding-right: 5px;
+        overflow-y: auto;
+
+    }
+    nav .mobile{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        text-align: left;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .Form-box{
+        width: 80%;
+    }
+    .Form-item{
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #question, #music-genre, #topic, #email{
+        width: 92%;
+    }
+    .Nazwa:hover{
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .Nazwa:hover h4{
+        opacity: 1;
+    }
+    .Bands-col{
+        margin-bottom: 5px;
+    }
+    .Bands-col:hover{
+        transform: scale(1);
+    }
+    .Footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .Footer-content {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        align-items: center; 
+    }
+    
+    .Social-links {
+        display: flex;
+        justify-content: space-around; 
+        margin-bottom: 10px; 
+    }
+    
+    .Social-links a {
+        display: inline-block;
+        margin: 0 5px; 
+    }
+    
+    .Footer-logo {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .Contact-info {
+        text-align: center;
+        margin-top: 10px; 
+    }
+    body{
+        overflow-x:hidden;
+    }
+    .event-calendar {
+        overflow-x: auto;
+
+    }
+    table{
+        width: 100%;
+    }
+}   
